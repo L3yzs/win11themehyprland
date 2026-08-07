@@ -14,9 +14,9 @@ sleep 0.20
 
 sed -i '/leaf = "layersIn"/s/style = "[^"]*"/style = "slide fade"/' ~/.config/hypr/configs/animations.lua
 sed -i '/leaf = "layersOut"/s/style = "[^"]*"/style = "slide fade"/' ~/.config/hypr/configs/animations.lua
-hyprctl reload # Animasyonların anında değişmesi için gerekli
+hyprctl reload 
 
-# 2. Siyah Arka Plan ve Border Ayarı
+
 BLACK_WALL="/home/leyzs/.config/Wİn11-Theme/black.png"
 swww img "$BLACK_WALL" --transition-type fade --transition-duration 1
 
@@ -63,7 +63,7 @@ fi
 sleep 0.3
 sed -i '/leaf = "layersIn"/s/style = "[^"]*"/style = "slide bottom"/' ~/.config/hypr/configs/animations.lua
 sed -i '/leaf = "layersOut"/s/style = "[^"]*"/style = "slide bottom"/' ~/.config/hypr/configs/animations.lua
-hyprctl reload # Ayarların anında devreye girmesi için
+hyprctl reload 
 
 #This part launches my ~/.config/waybar/win11 Waybar configuration.
 sleep 1.60
