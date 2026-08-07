@@ -1,0 +1,92 @@
+{ 
+    "name": "win11bar", 
+    "layer": "top", 
+    "output": "DP-1", 
+    "position": "bottom",
+    "exclusive": false, 
+    "height": 48, 
+    "margin-bottom": -40, 
+    "margin-top": 10, 
+    "margin-left": 0, 
+    "margin-right": 0, 
+
+    "modules-left": ["custom/weather"], 
+    "modules-center": [ 
+        "custom/launcher", "custom/explorer", "custom/firefox", "custom/notepad", "custom/spotify", "custom/steam", "custom/discord"
+    ], 
+    "modules-right": ["group/expand", "custom/ethernet", "group/audio", "clock", "custom/notification"], 
+
+    "custom/weather": { 
+        "format": "{}", 
+        "tooltip": true, 
+        "interval": 3600, 
+        "exec": "curl -s '",
+        "return-type": "" 
+    }, 
+
+    "group/expand": { 
+        "orientation": "horizontal", 
+        "drawer": { "transition-duration": 500, "transition-left-to-right": false }, 
+        "modules": [ "custom/arrow", "tray" ] 
+    },
+
+    "custom/ethernet": {
+        "format": " ",
+        "interval": 5,
+        "exec": "ping -c 1 google.com > /dev/null && echo 'connected' || echo 'disconnected'",
+        "return-type": "",
+        "tooltip": false
+    },
+
+    "group/audio": {
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 500,
+            "transition-left-to-right": true
+        },
+        "modules": [ "pulseaudio", "pulseaudio#percentage" ]
+    },
+
+    "pulseaudio": { 
+        "format": " {icon} ", 
+        "format-icons": { "default": [" ", " ", ""] },
+        "on-click": "pavucontrol"
+    }, 
+
+    "pulseaudio#percentage": { "format": "{volume}%" },
+
+    "clock": { 
+        "format": "{:%H:%M\n%d.%m.%Y}",
+        "justify": "right",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "month",
+            "on-scroll": 1,
+            "format": {
+                "months": "<span color='#ffffff'><b>{}</b></span>",
+                "days": "<span color='#ffffff'><b>{}</b></span>",
+                "weekdays": "<span color='#00c2ff'><b>{}</b></span>",
+                "today": "<span color='#000000' background='#00c2ff'><b>{}</b></span>"
+            }
+        }
+    }, 
+
+    "custom/launcher": { "format": " ", "on-click": "" }, 
+    "custom/explorer": { "format": " ", "on-click": "nemo" }, 
+    "custom/firefox":  { "format": " ", "on-click": "firefox" }, 
+    "custom/notepad":  { "format": " ", "on-click": "" }, 
+    "custom/spotify":  { "format": " ", "on-click": "spotify" }, 
+    "custom/steam":    { "format": " ", "on-click": "steam" }, 
+    "custom/discord":  { "format": " ", "on-click": "discord" }, 
+    "tray": { "icon-size": 16, "spacing": 8 },
+    "custom/arrow": { "format": "", "tooltip": false },
+    "custom/notification": {
+        "tooltip": false,
+        "format": "{icon}",
+        "format-icons": { "notification": "󱅫", "none": "󰂚", "dnd-notification": "󱏧", "dnd-none": "󱏧" },
+        "return-type": "json",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "escape": true
+    }
+}
