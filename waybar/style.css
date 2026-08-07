@@ -1,0 +1,135 @@
+* {
+    font-family: "Segoe UI", sans-serif;
+    border: none;
+    border-radius: 0;
+}
+
+window#waybar {
+    background: rgba(20, 20, 20, 0.6); 
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+/* --- HAVA DURUMU --- */
+#custom-weather {
+    padding-left: 20px;
+    padding-right: 10px;
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: -1px; 
+}
+
+/* --- TAKVİM: SAYDAM SİYAH, OVAL VE GÖLGESİZ TASARIM --- */
+tooltip {
+    background: rgba(20, 20, 20, 0.6); 
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    border-radius: 20px; /* İstediğin o modern oval köşeler */
+    padding: 15px;
+    box-shadow: none; 
+}
+
+tooltip label { 
+    color: #ffffff; 
+    font-size: 16px; 
+    padding: 5px; 
+}
+
+calendar {
+    padding: 10px;
+    background: transparent; 
+    font-size: 18px; 
+}
+
+/* Gün isimleri (Pz, Sa...) */
+calendar th {
+    color: #00c2ff; 
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+/* Sayıların yerleşimi */
+calendar td {
+    padding: 8px;
+}
+
+/* Bugün ve seçili gün kutusu */
+calendar .today, calendar .highlight {
+    background-color: #00c2ff;
+    color: #000000;
+    border-radius: 10px; 
+}
+
+/* --- HOVER EFEKTLERİ --- */
+#custom-launcher:hover, #custom-explorer:hover, #custom-firefox:hover,
+#custom-notepad:hover, #custom-spotify:hover, #custom-steam:hover,
+#custom-discord:hover, #clock:hover, #pulseaudio:hover, #custom-ethernet:hover,
+#custom-notification:hover, #custom-arrow:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+/* --- MERKEZDEKİ İKONLAR (DOCK) --- */
+#custom-launcher, #custom-explorer, #custom-firefox, #custom-notepad,
+#custom-spotify, #custom-steam, #custom-discord {
+    margin: 4px 2px;
+    padding: 0 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#custom-launcher { background-image: url('/home/leyzs/.config/Wİn11-Theme/win11logo.png'); background-size: 25px; }
+#custom-steam    { background-image: url('/home/leyzs/.config/Wİn11-Theme/steam.png'); background-size: 25px; }
+#custom-discord  { background-image: url('/home/leyzs/.config/Wİn11-Theme/discord.png'); background-size: 25px; }
+#custom-spotify  { background-image: url('/home/leyzs/.config/Wİn11-Theme/spotify.png'); background-size: 22px; }
+#custom-explorer { background-image: url('/home/leyzs/.config/Wİn11-Theme/explorer.png'); background-size: 28px; }
+#custom-firefox  { background-image: url('/home/leyzs/.config/Wİn11-Theme/microsoft-edge.png'); background-size: 28px; }
+#custom-notepad  { background-image: url('/home/leyzs/.config/Wİn11-Theme/notepad.png'); background-size: 28px; }
+
+/* --- OK SİMGESİ (ÇEKMECE OKU) --- */
+#custom-arrow { 
+    font-size: 14px; 
+    padding: 0 5px; 
+    margin-right: 12px; 
+}
+
+/* --- ETHERNET LOGOSU --- */
+#custom-ethernet {
+    margin: 4px 0px;
+    padding-left: 10px;
+    padding-right: 0px; 
+    background-image: url('/home/leyzs/İndirilenler/Wİn11-Theme/ethernet-logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 18px;
+}
+
+/* --- SES (PULSEAUDIO) --- */
+#pulseaudio { 
+    padding-left: 2px; 
+    padding-right: 2px; 
+}
+
+#pulseaudio.percentage { 
+    font-weight: 700; 
+    padding-left: 5px; 
+    padding-right: 8px; 
+}
+
+/* --- SAAT VE TARİH --- */
+#clock { 
+    font-size: 11px; 
+    font-weight: 700; 
+    padding: 0 10px; 
+}
+
+/* --- BİLDİRİM --- */
+#custom-notification { 
+    font-size: 18px; 
+    padding-right: 15px; 
+    padding-left: 5px; 
+}
+
+#custom-notification.notification { 
+    color: #3ab8ff; 
+}
