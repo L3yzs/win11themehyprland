@@ -71,5 +71,6 @@ waybar -c ~/.config/waybar/win11/config -s ~/.config/waybar/win11/style.css &
 sleep 1
 mpv --no-video /home/leyzs/.config/Wİn11-Theme/win11startupsound.mp4 &
 sleep 1
+#Migrates to Workspace 1
 hyprctl dispatch 'hl.dsp.focus({ workspace = "1" })'
 
