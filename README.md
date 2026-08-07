@@ -4,9 +4,7 @@
 
 This is my **Windows 11 inspired Hyprland theme**.
 
-I created this project to make Hyprland look and feel more like Windows 11 while keeping the flexibility of a Linux desktop.
-
-> ⚠️ **IMPORTANT:** This project may contain bugs or outdated configurations. I have not worked on this project for a long time, so some parts may require manual adjustments.
+I made this project to make Hyprland look and feel more like Windows 11 while still keeping the flexibility and customization of a Linux desktop.
 
 ---
 
@@ -14,11 +12,11 @@ I created this project to make Hyprland look and feel more like Windows 11 while
 
 ## 📁 THE `Win11-Theme` FOLDER
 
-Inside this repository, you will find a `Win11-Theme` folder.
+Inside this repository, there is a `Win11-Theme` folder.
 
 **THERE IS ANOTHER `Win11-Theme` FOLDER INSIDE IT.**
 
-You **MUST** copy that inner `Win11-Theme` folder into your:
+You **MUST** copy the inner `Win11-Theme` folder into your:
 
 ```text
 ~/.config/
@@ -39,15 +37,15 @@ The script depends on files inside this folder.
 
 ⚠️⚠️⚠️ CHANGE THE USERNAME / PATHS ⚠️⚠️⚠️
 
-The script currently contains paths that belong to my own system.
+The script contains paths that belong to my own system.
 
 My username is:
 
 leyzs
 
-You MUST replace my username/path with your own username and paths.
+You MUST replace my username and paths with your own.
 
-For example, if you see something like:
+For example, if you see:
 
 /home/leyzs/
 
@@ -57,19 +55,19 @@ change it to:
 
 DO NOT blindly run the script without checking the paths first.
 
-⚠️⚠️⚠️ PYwal CONFIGURATION ⚠️⚠️⚠️
+⚠️⚠️⚠️ PYwal CONFIGURATION — IMPORTANT ⚠️⚠️⚠️
 
-The script also uses Pywal for some of the theme and color-related functionality.
+The script uses Pywal for some of the theme and color-related functionality.
 
 My setup is heavily customized around Pywal, so YOU MAY NEED TO MODIFY THE PYwal PART OF THE SCRIPT FOR YOUR OWN SETUP.
 
-If you already have your own Pywal configuration, make sure the script matches your setup.
+Make sure the Pywal commands and paths match your own configuration.
 
-💡 Do not expect the Pywal configuration to work perfectly on every system without modification.
+💡 The Pywal configuration in this project is based on my personal setup and may not work perfectly without modification.
 
 📦 REQUIREMENTS
 
-For the script to work properly, you need to have these installed:
+For the script to work properly, you need:
 
 Pywal
 mpvpaper
@@ -90,7 +88,7 @@ For example:
 
 ~/.config/waybar/win11/
 
-Your Waybar configuration should look like this:
+Your Waybar configuration should look something like this:
 
 ~/.config/waybar/
 ├── win11/
@@ -98,11 +96,21 @@ Your Waybar configuration should look like this:
 │   └── style.css
 └── ...
 
-You need to put the Win11 Waybar configuration file and the Win11 style.css that I provide inside this folder.
+Put the Win11 Waybar configuration file and the Win11 style.css that I provide inside this win11 folder.
 
 🚨 THIS STEP IS REQUIRED!
 
-If you don't create the win11 folder and place the provided Waybar files inside it, THE WAYBAR PART OF THE THEME MAY NOT WORK CORRECTLY.
+If you don't create the win11 folder and put the provided Waybar files inside it, THE WAYBAR PART OF THE THEME MAY NOT WORK CORRECTLY.
+
+🖥️ WINDOWS 11-STYLE NOTIFICATION PANEL & LAUNCHER
+
+I also previously made a Windows 11-like notification panel and launcher/start menu for this setup.
+
+Unfortunately, I lost those files when I formatted my computer. 😭
+
+Because of that, the original notification panel and launcher are currently missing from this repository.
+
+I may recreate them in the future.
 
 📜 SCRIPT
 
@@ -110,27 +118,27 @@ The main script is located here:
 
 Win11-Theme/win11_theme.sh
 
-You can view it here:
+You can find it here:
 
 https://github.com/L3yzs/win11themehyprland/blob/main/Win11-Theme/win11_theme.sh
 
-Before running it, PLEASE READ THROUGH THE SCRIPT AND CHECK THE PATHS.
+Before running the script, PLEASE READ THROUGH IT AND CHECK THE PATHS.
 
 ⚠️ POSSIBLE ERRORS
 
 There MAY BE ERRORS in this project.
 
-I haven't touched or maintained this project for quite a while, so some configurations may be outdated or may not work exactly as expected on your system.
+I haven't worked on this project for quite a while, so some configurations may be outdated or may not work exactly as expected on your system.
 
-If something doesn't work:
+If something doesn't work, check:
 
-Check your file paths.
-Check your username.
-Check your Pywal configuration.
-Make sure all required programs are installed.
-Check your Waybar configuration.
-Make sure the Win11-Theme folder is correctly placed inside ~/.config/.
-Check the script for paths or commands that are specific to my system.
+Your username and file paths
+Your Pywal configuration
+Your Waybar configuration
+Your Eww configuration
+Whether all required programs are installed
+Whether the Win11-Theme folder is correctly placed inside ~/.config/
+Whether the script contains commands specific to my old system
 🛠️ CUSTOMIZATION
 
 This project is intended to be customized.
@@ -143,17 +151,18 @@ Pywal configuration
 Waybar configuration
 Eww configuration
 Wallpaper configuration
+Hyprland keybinds
 Other system-specific commands
 
 Feel free to modify the project to fit your own Hyprland setup.
 
 ❤️ FINAL NOTE
 
-This project was made for my own Hyprland setup, so IT IS NOT GUARANTEED TO WORK OUT OF THE BOX ON EVERY SYSTEM.
+This project was originally made for my own Hyprland setup, so IT IS NOT GUARANTEED TO WORK OUT OF THE BOX ON EVERY SYSTEM.
 
 Please check the configuration before running anything.
 
-Have fun customizing your Hyprland setup! :D
+If you find something broken, feel free to fix it and adapt the project to your own setup. :D
 
 ⭐ If you like the project
 
